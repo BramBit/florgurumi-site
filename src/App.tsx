@@ -1,9 +1,17 @@
+import { Routes, Route, Navigate } from 'react-router-dom'
+import { AuthListener, ProtectedRoute, LoginPage } from '@/modules/auth'
 
 function App() {
   return (
-    <div className="min-h-screen bg-background text-foreground">
-      <p className="p-8">Florgurumi — en construcción</p>
-    </div>
+    <AuthListener>
+      <Routes>
+        <Route path="/login" element={<LoginPage />} />
+        <Route element={<ProtectedRoute />}>
+          <Route path="/" element={<div className="p-8">Florgurumi — en construcción</div>} />
+        </Route>
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+    </AuthListener>
   )
 }
 
