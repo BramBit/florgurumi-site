@@ -3,6 +3,7 @@ import { Toaster } from 'sonner'
 import { AuthListener, ProtectedRoute, LoginPage } from '@/modules/auth'
 import { ProductsPage } from '@/modules/products'
 import { CustomersPage } from '@/modules/customers'
+import { SalesHistoryPage, NewSalePage } from '@/modules/sales'
 import { AppLayout } from '@/app/layout/AppLayout'
 
 function App() {
@@ -24,6 +25,8 @@ function App() {
             />
             <Route path="/productos" element={<ProductsPage />} />
             <Route path="/clientes" element={<CustomersPage />} />
+            <Route path="/ventas" element={<SalesHistoryPage />} />
+            <Route path="/ventas/nueva" element={<NewSalePage />} />
           </Route>
         </Route>
         <Route path="*" element={<Navigate to="/" replace />} />

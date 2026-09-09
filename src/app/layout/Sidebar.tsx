@@ -1,11 +1,12 @@
 import { NavLink } from 'react-router-dom'
-import { Home, Package, Users } from 'lucide-react'
+import { Home, Package, Users, ShoppingCart } from 'lucide-react'
 import { cn } from '@/shared/lib/utils'
 
 const navItems = [
   { to: '/', label: 'Dashboard', icon: Home, end: true },
   { to: '/productos', label: 'Productos', icon: Package, end: false },
   { to: '/clientes', label: 'Clientes', icon: Users, end: false },
+  { to: '/ventas', label: 'Ventas', icon: ShoppingCart, end: false },
 ]
 
 export function Sidebar() {
