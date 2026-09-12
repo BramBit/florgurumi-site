@@ -4,6 +4,7 @@ import { AuthListener, ProtectedRoute, LoginPage } from '@/modules/auth'
 import { ProductsPage } from '@/modules/products'
 import { CustomersPage } from '@/modules/customers'
 import { SalesHistoryPage, NewSalePage } from '@/modules/sales'
+import { ExpensesPage } from '@/modules/expenses'
 import { AppLayout } from '@/app/layout/AppLayout'
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
             <Route path="/clientes" element={<CustomersPage />} />
             <Route path="/ventas" element={<SalesHistoryPage />} />
             <Route path="/ventas/nueva" element={<NewSalePage />} />
+            <Route path="/gastos" element={<ExpensesPage />} />
           </Route>
         </Route>
         <Route path="*" element={<Navigate to="/" replace />} />
